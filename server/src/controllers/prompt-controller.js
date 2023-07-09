@@ -18,7 +18,7 @@ module.exports = {
     } catch(error){
       return res.status(400).json({
         succes: false,
-        error: error.response ? error.response : "Erro no servidor :/"
+        error: error.response ? error.response.data : "Erro no servidor :/"
       })
     }
   }
